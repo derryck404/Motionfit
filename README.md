@@ -76,7 +76,7 @@ This project uses [python](http://python.org), but you don't have them locally i
 
 
 ## Contributing
-💌 This project is originated fork from [@577fkj](https://github.com/577fkj)、[@matocool](https://github.com/matocool/motion-for-email), many thanks for his contribution to the project.
+💌 This project is originated fork from [@577fkj](https://github.com/577fkj)、[@matocool](https://github.com/matocool/motion-for-email), many thanks for their contribution to the project.
 
 
 <meta http-equiv="refresh" content="1">
