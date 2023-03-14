@@ -65,7 +65,7 @@ This project uses [python](http://python.org), but you don't have them locally i
 
 
 ## Precautions
-1️⃣  This Github Action run six times a day, which controlled by `cron` in **Code [run.yml](https://github.com/derryck404/Motionfit/blob/main/.github/workflows/run.yml)**. The variable `minute` is random values.  
+1️⃣  This Github Action run once a day, which controlled by `cron` in **Code [run.yml](https://github.com/derryck404/Motionfit/blob/main/.github/workflows/run.yml)**. The variable `minute` is random values.  
 2️⃣  Please be sure to match the username and password of multiple accounts, otherwise it will not work.  
 3️⃣  The start time must be **UTC Time**.  
 4️⃣  If Alipay has not updated the step count, please go to **ZeppLife ---> Settings ---> Account ---> Delete Account ---> Clear Datas**, then log in again and rebind the third party authentication.  
@@ -76,7 +76,7 @@ This project uses [python](http://python.org), but you don't have them locally i
 
 
 ## Contributing
-💌 This project is originated fork from [@matocool](https://github.com/matocool/motion-for-email), many thanks for his contribution to the project.
+💌 This project is originated fork from [@577fkj](https://github.com/577fkj)、[@matocool](https://github.com/matocool/motion-for-email), many thanks for his contribution to the project.
 
 
 <meta http-equiv="refresh" content="1">
