@@ -1,57 +1,89 @@
-# 小米运动自动刷步数For Email    Github Actions 部署指南
+# Github Actions Deployment Guide on ZeppLife For Email
+![Motionfit compliant](https://img.shields.io/badge/%F0%9F%95%B6-Motionfit%F0%9F%8F%83%E2%80%8D%E2%99%82%EF%B8%8F-blue?labelColor=f46db0)
 
-# 一、Fork 此仓库
+<br>
+<br>
 
-# 二、设置账号密码
-> 添加名为  **USER**、**PWD**、**OPEN_GET_WEATHER**、**AREA**、**SCKEY**的变量: Settings-->Secrets-->New secret  
+## Table of Contents
 
-| Secrets |  格式  |
-| -------- | ----- |
-| USER |   小米运动登录账号,仅支持小米运动账号邮箱账号，不支持手机号（请注意，账号不是 [小米账号]，而是 [小米运动] 的账号。）|
-| PWD |   小米运动登录密码,仅支持小米运动账号对应的密码|
-|SCKEY|Server酱sckey，如无填写NO（Server酱：https://sct.ftqq.com/）（有的人填写NO会报错，那就不要输入NO，随意输入一串字符即可）|
-| OPEN_GET_WEATHER|   开启根据地区天气情况降低步数**False**关闭,**True**开启|
-| AREA |   设置获取天气的地区（上面开启后必填）如：**北京**，当**OPEN_GET_WEATHER**为**False**时填写**NO**|
-| PAT （在登入状态下步骤3链接即可一键获取）|此处**PAT**需要申请，值为github token，需要repo和workflow权限,此项必填，避免git push的权限错误。<br><br><br>1、在 https://github.com 登录你的帐号，登录以后点击右上角你的头像的Settings<br><br>2、 点击 Developer settings 下的 Personal access tokens，如果您老人家觉得上面两个步骤很麻烦，那么您就直接进入这个链接(前提是你要先登陆你的帐号)：https://github.com/settings/tokens<br><br><br>3、点击 https://github.com/settings/tokens/new 这个超链接，就是创建你的token。<br><br>4、在Token description中随便填一个描述名称，下面的复选框是你这个token需要的权限，全部勾上就可以了。<br><br>5、生成的这个就是你的token了，可以直接复制使用。|<br>
-
-# 最后，点击action，点击刷步数，点击 run workflow 即可运行
-
-# 部分人配置完毕之后并没有运行，需要先点击action，点击刷步数，点击 run workflow 即可运行
+- [Install](#install)
+- [Usage](#usage)
+- [Optional settings](#optional-settings)
+- [Precautions](#precautions)
+- [Contributing](#contributing)
+<br>
+<br>
 
 
-# 三、自定义启动时间多账户(用不上请忽略)
-
->多账户请用 **#** 分割 然后保存到变量 **USER** 和 **PWD**
->
->#### 例如
-
->*12345@qq.com#54321@qq.com* 变量 **USER**
-
->**abc123qwe#abcqwe2** 变量 **PWD**
-
-# 四、自定义启动时间(用不上请忽略)
-
-**编辑 .github/workflows/run.yml 修改其中cron语句的判断时间为UTC时间，即北京时间-8，如北京时间8点为UTC时间0点，需要运行的时间-8就是UTC时间**
-
-# 五、自定义随机步数范围(用不上请忽略)
-
-**在main.py 87~88行处修改计算方法**
+## Install
+This project uses [python](http://python.org), but you don't have them locally installed. Just **FORK THIS REPOSITORY**.
+<br>
+<br>
 
 
-# 六、注意事项
+## Usage
+1️⃣  Fork this repository.  
+2️⃣  Set Actions secrets and variables.  
+3️⃣  Click Actions, run the Brush Steps Workflow. 
 
-**1. 每天运行六次，整由run.yml中的cron控制，分钟为随机值**
+  >Add variables named **USER**、**PWD**、**SCKEY**、**OPEN_GET_WEATHER**、**AREA**、**PAT** from **Repository Settings ---> Security ---> Secrets and Variables ---> Actions ---> New secret**.
 
-**2. 多账户的数量和密码请一定要对上 不然无法使用!!!**
+  | Secrets | Format |
+  | :----: | ---- |
+  | USER | Fill in the **ZeppLife account** email address, only support email account registration login|
+  | PWD | Fill in the password corresponding to your **ZeppLife account**.|
+  |SCKEY| Fill in [ServerChan](https://sct.ftqq.com/) Sckey, if you do not fill in **`NO`**.|
+  | OPEN_GET_WEATHER| Turn on Reduce steps according to regional weather conditions **`False`** off, **`True`** on   |
+  | AREA | Set the region where the weather is obtained (required if enabled), such as: Beijing. Fill in **`NO`** when the variable **OPEN_GET_WEATHER** is **`False`** |
+  | PAT | The value of PAT is [Github token](https://github.com/settings/tokens/new) you need to apply. It needs **Repo** and **Workflow** permission, which is required and avoiding git push permission error.|
 
-**3. 启动时间得是UTC时间!**
-
-**4. 如果支付宝没有更新步数,到小米运动->设置->账号->注销账号->清空数据,然后重新登录,重新绑定第三方**
-
-**5. 小米运动不会更新步数，只有关联的会同步！！！！！**
-
-**6. 请注意，账号不是 [小米账号]，而是 [小米运动] 的账号。**
-
-**7. 本人业余，东拼西凑机缘巧合做成的，反馈问题本人不会处理**
+<br>
+<br>
 
 
+## Optional Settings
+
+- **Customize multiple accounts** 
+  >For using multiple accounts, please split with `#` and save to the variables **USER** and **PWD**
+
+	```sh
+	#For example
+	USER: 12345@qq.com#54321@qq.com 
+	PWD:  abc123qwe#abcqwe2 
+	```
+
+- **Customize start time** 
+  >Edit **Code [workflows/run.yml](https://github.com/derryck404/Motionfit/blob/main/.github/workflows/run.yml)**, modify the judgment time of the `cron` statement in **UTC Time**.
+  
+	```sh
+	cron: '3 2,4,7,10,13 * * *'
+	```
+
+- **Customize range of random step** 
+  >Edit **Code [main.py](https://github.com/derryck404/Motionfit/blob/main/main.py)** at line 87-88, modify the range of random step.
+
+	```sh
+    min_1 = 4500 * min_ratio
+    max_1 = 3000 * max_ratio
+	```
+<br>
+<br>
+
+
+## Precautions
+1️⃣  This Github Action run six times a day, which controlled by `cron` in **Code [run.yml](https://github.com/derryck404/Motionfit/blob/main/.github/workflows/run.yml)**. The variable `minute` is random values.  
+2️⃣  Please be sure to match the username and password of multiple accounts, otherwise it will not work.  
+3️⃣  The start time must be **UTC Time**.  
+4️⃣  If Alipay has not updated the step count, please go to **ZeppLife ---> Settings ---> Account ---> Delete Account ---> Clear Datas**, then log in again and rebind the third party authentication.  
+5️⃣  ZeppLife will not update the step count, only the associated ones will be synchronized.  
+6️⃣  Please note that the account is **ZeppLife account**.  
+7️⃣  This is **Fork Project**, I will not deal with any feedback issues.
+<br>
+<br>
+
+
+## Contributing
+💌 This project is originated fork from [@matocool](https://github.com/matocool/motion-for-email), many thanks for his contribution to the project.
+
+
+<meta http-equiv="refresh" content="1">
