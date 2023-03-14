@@ -22,7 +22,8 @@ This project uses [python](http://python.org), but you don't have them locally i
 2️⃣  Set Actions secrets and variables.  
 3️⃣  Click Actions, run the Brush Steps Workflow. 
 
-  >Add variables named **USER**、**PWD**、**SCKEY**、**OPEN_GET_WEATHER**、**AREA**、**PAT** from **Repository Settings ---> Security ---> Secrets and Variables ---> Actions ---> New secret**.
+  >Add variables named **USER**、**PWD**、**SCKEY**、**OPEN_GET_WEATHER**、**AREA**、**PAT**.  
+  >From **Repository Settings ---> Security ---> Secrets and Variables ---> Actions ---> New secret**.
 
   | Secrets | Format |
   | :----: | ---- |
