@@ -71,7 +71,6 @@ This project uses [python](http://python.org), but you don't have them locally i
 4️⃣  If Alipay has not updated the step count, please go to **ZeppLife ---> Settings ---> Account ---> Delete Account ---> Clear Datas**, then log in again and rebind the third party authentication.  
 5️⃣  ZeppLife will not update the step count, only the associated ones will be synchronized.  
 6️⃣  Please note that the account is **ZeppLife account**.  
-7️⃣  This is **Fork Project**, I will not deal with any feedback issues.
 
 
 
