@@ -1,8 +1,7 @@
 # Github Actions Deployment Guide on ZeppLife For Email
 ![Motionfit compliant](https://img.shields.io/badge/%F0%9F%95%B6-Motionfit%F0%9F%8F%83%E2%80%8D%E2%99%82%EF%B8%8F-blue?labelColor=f46db0)
 
-<br>
-<br>
+
 
 ## Table of Contents
 
@@ -11,14 +10,11 @@
 - [Optional settings](#optional-settings)
 - [Precautions](#precautions)
 - [Contributing](#contributing)
-<br>
-<br>
 
 
 ## Install
 This project uses [python](http://python.org), but you don't have them locally installed. Just **FORK THIS REPOSITORY**.
-<br>
-<br>
+
 
 
 ## Usage
@@ -37,8 +33,6 @@ This project uses [python](http://python.org), but you don't have them locally i
   | AREA | Set the region where the weather is obtained (required if enabled), such as: Beijing. Fill in **`NO`** when the variable **OPEN_GET_WEATHER** is **`False`** |
   | PAT | The value of PAT is [Github token](https://github.com/settings/tokens/new) you need to apply. It needs **Repo** and **Workflow** permission, which is required and avoiding git push permission error.|
 
-<br>
-<br>
 
 
 ## Optional Settings
@@ -66,8 +60,7 @@ This project uses [python](http://python.org), but you don't have them locally i
     min_1 = 4500 * min_ratio
     max_1 = 3000 * max_ratio
 	```
-<br>
-<br>
+
 
 
 ## Precautions
@@ -78,8 +71,7 @@ This project uses [python](http://python.org), but you don't have them locally i
 5️⃣  ZeppLife will not update the step count, only the associated ones will be synchronized.  
 6️⃣  Please note that the account is **ZeppLife account**.  
 7️⃣  This is **Fork Project**, I will not deal with any feedback issues.
-<br>
-<br>
+
 
 
 ## Contributing
