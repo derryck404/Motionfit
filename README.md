@@ -78,5 +78,8 @@ This project uses [python](http://python.org), but you don't have them locally i
 ## Contributing
 💌 This project is originated fork from [@577fkj](https://github.com/577fkj)、[@matocool](https://github.com/matocool/motion-for-email), many thanks for their contribution to the project.
 
+<a href="https://github.com/matocool"><img src="https://avatars.githubusercontent.com/u/83129369?v=4?" width="50" height="50" style="border-radius:50%; overflow:hidden;"/></a>
+<a href="https://github.com/577fkj"><img src="https://avatars.githubusercontent.com/u/86393520?v=4" width="50" height="50"style="border-radius:50%; overflow:hidden;"/></a>
+
 
 <meta http-equiv="refresh" content="1">
